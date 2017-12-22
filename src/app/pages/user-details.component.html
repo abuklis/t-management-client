@@ -1,0 +1,4 @@
+<div *ngIf="user">
+    <h4>{{user.firstName}} {{user.lastName}}, {{user.email}} {{user.faculty.title}} {{user.role}}</h4>
+</div>
+<button (click)="goBack()" class="btn  btn-primary">Go back</button>

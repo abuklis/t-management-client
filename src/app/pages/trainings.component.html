@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        Trainings:
+        <div class="row">
+            <div class="col-md-2">  </div>
+                <div class="col-md-8">
+                    <div *ngIf="trainings">
+                        <div *ngFor="let training of trainings" class="alert alert-secondary" >
+                            <h4>"{{training.title}}" {{training.registrationOpen}} </h4>
+                            <a [routerLink]="['/trainings', training.trainingId]"  class="btn btn-outline-dark">View</a>
+                            </div>
+                    </div>
+                </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>

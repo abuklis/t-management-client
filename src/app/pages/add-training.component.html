@@ -1,0 +1,31 @@
+<div >
+    <form (ngSubmit)="saveTraining()" >
+        <div class="form-group">
+            <label>Title:</label>  
+            <input type="text" class="form-control"  [(ngModel)]="title" id="title" name="title" required/>
+        </div>
+        <div class="form-group">
+            <label>Description:</label>  
+            <input type="text" class="form-control"  [(ngModel)]="description" id="description" name="description" required/>
+        </div>
+            <div class="form-group">
+                <label >AttendeesAmount:</label>  
+                <input type="number" class="form-control"  [(ngModel)]="attendeesAmount" id="attendeesAmount" name="attendeesAmount" min="0" max = "150" required/>
+            </div>
+            <div class="form-group">
+                <label>TeacherId:</label>
+                 <input type="number"  class="form-control"  name="teacherId" [(ngModel)]="teacherId" min="0" max = "10" required/>
+            </div>
+            <div class="form-group">
+                <label>startDate:</label>  
+                <input type="date" class="form-control"  [(ngModel)]="startDate" id="startDate" name="startDate" required/>
+            </div>
+            <div class="form-group">
+                <label>endDate:</label>  
+                <input type="date" class="form-control"  [(ngModel)]="endDate" id="endDate" name="endDate" required  min="{{startDate}}"/>
+            </div>
+            <button type="submit">Submit</button>
+        </form>            
+</div>
+
+<button (click)="goBack()" class="btn  btn-primary">Go back</button>

@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        Users:
+        <div class="row">
+            <div class="col-md-2">  </div>
+                <div class="col-md-8">
+                    <div *ngIf="users">
+                        <div *ngFor="let user of users" class="alert alert-secondary" >
+                            <h4>{{user.firstName}} {{user.lastName}}, {{user.faculty.title}}</h4>
+                            <a [routerLink]="['/users', user.userId]"  class="btn btn-outline-dark">View</a>
+                            </div>
+                    </div>
+                </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>

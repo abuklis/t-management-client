@@ -1,0 +1,14 @@
+<div *ngIf="training">
+    <h4>"{{training.title}}" by {{training.teacher.firstName}}
+        {{training.startDate}} - {{training.endDate}}</h4>
+        <a [routerLink]="['/trainings', training.trainingId, 'edit']"  class="btn btn-outline-dark">Edit</a>
+
+        <div *ngIf="isStudentInSystem">
+            <button (click)="registerOnTraining()" class="btn  btn-outline-dark">Register!</button>
+        </div>
+</div>
+
+
+<button (click)="deleteTraining()" class="btn  btn-outline-dark">Delete</button>
+
+<button (click)="goBack()" class="btn  btn-primary">Go back</button>

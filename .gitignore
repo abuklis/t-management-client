@@ -36,7 +36,29 @@ testem.log
 # e2e
 /e2e/*.js
 /e2e/*.map
+/e2e
+
 
 # System Files
 .DS_Store
 Thumbs.db
+/node_modules
+.angular-cli.json
+.editorconfig
+karma.conf.js
+package-lock.json
+protractor.conf.js
+tsconfig.json
+tslint.json
+/src/assets
+/src/environments
+/src/favicon.ico
+/src/main.ts
+/src/polyfills.css
+/src/test.ts
+/src/tsconfig.app.json
+/src/tsconfig.spec.json
+/src/typings.d.ts
+.gitignore
+
+
